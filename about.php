@@ -10,10 +10,10 @@
         </h1>
        <table border="2" align="center" cellspacing="0" cellpadding="10px">
             <tr>
-                <td><a href="index.html">Home</a></td>
-                <td><a href="about.html">about</a></td>
-                <td><a href="contact.html">contact</a></td>
-                <td><a href="mahasiswa.html">Mahasiswa</a></td>
+                <td><a href="index.php">Home</a></td>
+                <td><a href="about.php">about</a></td>
+                <td><a href="contact.php">contact</a></td>
+                <td><a href="mahasiswa.php">Mahasiswa</a></td>
             </tr>
         </table>
         
