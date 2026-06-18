@@ -1,3 +1,33 @@
+<?php
+
+$koneksi = mysqli_connect("localhost","root","","ahmadikhsannweekly");
+
+if($koneksi)
+
+{
+    echo "koneksi berhasil!!!!!!!!!";
+}
+
+
+$query = "SELECT * FROM mahasiswa";
+$result = mysqli_query($koneksi, $query); ///lemari
+/// ambil data (fetch) dari mahasiswa
+while($mhs = mysqli_fetch_array($result))
+    {
+         var_dump($mhs);
+    }
+
+
+
+/// mysqli_fetch_row array numeric
+///mysqli_fecth_assoc array associative
+/// mysqli_fetch_array array numeric/associative
+///mysqli_fetch_object
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
