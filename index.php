@@ -30,7 +30,7 @@
             Nim  : 13242520049
             Prodi: Teknologi Informasi
 
-            Deskripsi : Perkenalkan saya ahmad ikhsanudin , Saya Takut sama kecoa
+            Deskripsi : Perkenalkan saya ahmad ikhsanudin , Saya Takut sama kecoa karena menjijikan
         </p>
         <img src="Asset/Logo-Universitas-Muhammadiyah-Semarang.png" alt="" width="200">
     </body>
