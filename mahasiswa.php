@@ -1,33 +1,20 @@
+
 <?php
+require 'fungsi.php';
+$koneksi = mysqli_connect("localhost", "root", "", "ahmadikhsannweekly");
 
-$koneksi = mysqli_connect("localhost","root","","ahmadikhsannweekly");
-
-if($koneksi)
-
-{
-    echo "koneksi berhasil!!!!!!!!!";
+if (!$koneksi) {
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
 
-
 $query = "SELECT * FROM mahasiswa";
-$result = mysqli_query($koneksi, $query); ///lemari
-/// ambil data (fetch) dari mahasiswa
-while($mhs = mysqli_fetch_array($result))
-    {
-         var_dump($mhs);
-    }
-
-
-
-/// mysqli_fetch_row array numeric
-///mysqli_fecth_assoc array associative
-/// mysqli_fetch_array array numeric/associative
-///mysqli_fetch_object
-
-
-
+$result = mysqli_query($koneksi, $query);
 ?>
 
+
+
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +26,7 @@ while($mhs = mysqli_fetch_array($result))
     <h1 align="center">
              WEB TI AMD - 2026
         </h1>
+        
         <table border="2" align="center" cellspacing="0" cellpadding="10px">
             <tr>
                 <td><a href="index.php">Home</a></td>
@@ -49,6 +37,43 @@ while($mhs = mysqli_fetch_array($result))
         </table>
         <br><br>
         <h2>Data Mahasiswa</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<body>
+
+
+
+    <br><br>
+
+  
+
+    <table border="1" align="center" cellspacing="0" cellpadding="10">
+        <tr>
+            <th>No</th>
+            <th>NIM</th>
+            <th>Nama</th>
+            <th>Jurusan</th>
+            <th>Email</th>
+        </tr>
+
+        <?php $no = 1; ?>
+        <?php while($mhs = mysqli_fetch_assoc($result)) : ?>
+        <tr>
+            <td><?= $no++; ?></td>
+            <td><?= $mhs['nim']; ?></td>
+            <td><?= $mhs['nama']; ?></td>
+            <td><?= $mhs['jurusan']; ?></td>
+            <td><?= $mhs['email']; ?></td>
+        </tr>
+        <?php endwhile; ?>
+        
+    </table>
+
         <table border="1" cellpadding="6px">
             <tr>
                 <td rowspan="2">baris 1, kolom1</td>
