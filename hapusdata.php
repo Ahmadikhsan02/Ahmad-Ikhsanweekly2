@@ -1,7 +1,17 @@
 <?php
 require 'fungsi.php';
 
-$id = $_GET["id"];
+if (!isset($_GET["id"])) {
+    echo "
+        <script>
+            alert('ID tidak ditemukan!');
+            document.location.href = 'mahasiswa.php';
+        </script>
+    ";
+    exit;
+}
+
+$id = (int) $_GET["id"];
 
 if (hapus($id) > 0) {
     echo "

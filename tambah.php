@@ -13,7 +13,7 @@ if (isset($_POST["submit"])) {
         echo "
             <script>
                 alert('Data gagal ditambahkan!');
-                document.location.href = 'mahasiswa.php';
+                document.location.href = 'tambah.php';
             </script>
         ";
     }
@@ -21,7 +21,7 @@ if (isset($_POST["submit"])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,7 +30,7 @@ if (isset($_POST["submit"])) {
 <body>
     <h2>Tambah Data Mahasiswa</h2>
 
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
         <ul>
             <li>
                 <label>NIM :</label><br>
@@ -41,12 +41,20 @@ if (isset($_POST["submit"])) {
                 <input type="text" name="nama" required>
             </li>
             <li>
-                <label>Jurusan :</label><br>
-                <input type="text" name="jurusan" required>
+                <label>Prodi :</label><br>
+                <input type="text" name="prodi" required>
             </li>
             <li>
                 <label>Email :</label><br>
                 <input type="email" name="email" required>
+            </li>
+            <li>
+                <label>No HP :</label><br>
+                <input type="text" name="no_hp" required>
+            </li>
+            <li>
+                <label>Foto :</label><br>
+                <input type="file" name="foto" accept=".jpg,.jpeg,.png">
             </li>
             <br>
             <li>
